@@ -6,12 +6,11 @@ int main()
     lcm=(a>b)?a:b;
     while(1)
     {
-        if(lcm%a==0&lcm%b==0)
+        if(lcm%a==0&&lcm%b==0)
         {
             printf("%d",lcm);
             break;
         }
-        
         lcm++;
     }
 }
