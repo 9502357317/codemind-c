@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    scanf("%d%d",&a,&b);
-    if(a%2==0||b%2==0)
+    int m,n;
+    scanf("%d%d",&m,&n);
+    if(m%2==0||n%2==0)
     {
         printf("Player 1");
     }
