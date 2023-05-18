@@ -18,7 +18,7 @@ int main()
             }
             else if(q%5==0)
             {
-                q=q/5;
+                q=q%5;
             }
             else
             {
@@ -39,7 +39,7 @@ int main()
         }
         else
         {
-            printf("Ugly Number");
+           printf("Ugly Number"); 
         }
     }
     else
