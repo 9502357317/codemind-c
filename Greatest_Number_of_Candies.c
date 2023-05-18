@@ -15,6 +15,7 @@ int main()
             max=arr[i];
         }
     }
+    //printf("%d",max);
     int m;
     scanf("%d",&m);
     for(i=0;i<n;i++)
