@@ -14,5 +14,6 @@ int main()
         }
         q=q/10;
     }
-    printf("%d",max);
+   
+ printf("%d",max);
 }
