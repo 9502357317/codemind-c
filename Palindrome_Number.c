@@ -1,41 +1,28 @@
 #include<stdio.h>
-int is_palndrm(int);
 int main()
 {
-	int n,nm,i;
-	scanf("%d",&nm);
-	for(i=1;i<=nm;i++)
-	{
-	scanf("%d",&n);
-	if(is_palndrm(n))
-	{
-		printf("True
+    int x,j;
+    scanf("%d",&x);
+    for(j=1;j<=x;j++)
+    {
+        int n,rev=0,rem,x;
+        scanf("%d",&n);
+        x=n;
+        while(n!=0)
+        {
+            rem=n%10;
+            rev=rev*10+rem;
+            n=n/10;
+        }
+        if(x==rev)
+        {
+            printf("True
 ");
-	}
-	else
-	{
-		printf("False
+        }
+        else
+        {
+            printf("False
 ");
-	}
-	}
-	
-}
-int is_palndrm(int m)
-{
-	int q,r,s=0;
-	q=m;
-	while(q!=0)
-	{
-		r=q%10;
-		s=s*10+r;
-		q=q/10;	
-	}
-	if(m==s)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+        }
+    }
 }
