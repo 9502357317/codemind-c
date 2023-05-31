@@ -1,21 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int a=0,b=1,n;
+    int n,v=0,k=1,r,i,j=0;
     scanf("%d",&n);
-    int fib=0;
-    while(a<=n)
+    for(i=0;i<n;i++)
     {
-        if(a==n)
+        r=v+k;
+        v=k;
+        k=r;
+        if(r==n)
         {
-            fib=1;
-            break;
+            j++;
         }
-        int c=a+b;
-        a=b;
-        b=c;
     }
-    if(fib==1)
+    if(j!=0)
     {
         printf("True");
     }
