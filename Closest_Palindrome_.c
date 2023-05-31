@@ -1,50 +1,51 @@
 #include<stdio.h>
-int main()
+int pal(int a)
 {
-    int n,i,j,r,cp,sp,d,e;
-    scanf("%d",&n);
-    for(i=n-1;i>n-20;i--)
+    int b,r,s=0;
+    b=a;
+    while(a)
     {
-        j=i;
-        r=0;
-        while(j>0)
-        {
-            r=r*10+j%10;
-            j/=10;
-        }
-        if(r==i)
-        {
-            cp=i;
-            break;
-        }
+        r=a%10;
+        s=s*10+r;
+        a/=10;
     }
-    for(i=n+1;i<=n+20;i++)
+    if(s==b)
     {
-        j=i;
-        r=0;
-        while(j>0)
-        {
-            r=r*10+j%10;
-            j/=10;
-        }
-        if(r==i)
-        {
-            sp=i;
-            break;
-        }
-    }
-    d=n-cp;
-    e=sp-n;
-    if(d<e)
-    {
-        printf("%d",cp);
-    }
-    else if(d==e)
-    {
-       printf("%d %d",cp,sp);
+        return 1;
     }
     else
     {
-        printf("%d",sp);
+        return 0;
+    }
+}
+int main()
+{
+    int r,v,k;
+    scanf("%d",&r);
+    for(v=r-1;;v--)
+    {
+        if(pal(v))
+        {
+            break;
+        }
+    }
+    for(k=r+1;;k++)
+    {
+        if(pal(k))
+        {
+            break;
+        }
+    }
+    if(k-r==r-v)
+    {
+        printf("%d %d",v,k);
+    }
+    else if(k-r>v-r)
+    {
+        printf("%d",v);
+    }
+    else
+    {
+        printf("%d ",k);
     }
 }
