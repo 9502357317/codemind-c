@@ -1,15 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,min;
-    scanf("%d%d",&a,&b);
-    min=(a>b)?a:b;
-    for(min;min>0;min--)
+    int n,i,m,s=0;
+    scanf("%d%d",&n,&m);
+    for(i=1;i<=n&&i<=m;i++)
     {
-        if(a%min==0 && b%min==0)
+        if(n%i==0 && m%i==0)
         {
-            printf("%d",min);
-            break;
+            s=i;
         }
     }
+    printf("%d",s);
 }
