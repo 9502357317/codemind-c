@@ -1,24 +1,32 @@
 #include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-    int n,arr[100],b,i=0,j,k;
+    int n,r,f,s,t,l;
     scanf("%d",&n);
-    for(k=n;k>0;k=k/10)
+    l=n%10;
+    n=n/10;
+    t=n%10;
+    n=n/10;
+    s=n%10;
+    n=n/10;
+    f=n%10;
+    n=n/10;
+    if(f==6)
     {
-        b=k%10;
-        arr[i]=b;
-        i++;
+        f=9;
     }
-    for(j=i-1;j>=0;j--)
+    else if(s==6)
     {
-        if(arr[j]==6)
-        {
-            arr[j]=9;
-            break;
-        }
+        s=9;
     }
-    for(j=i-1;j>=0;j--)
+    else if(t==6)
     {
-        printf("%d",arr[j]);
+        t=9;
     }
+    else if(l==6)
+    {
+        l=9;
+    }
+    printf("%d%d%d%d",f,s,t,l);
 }
